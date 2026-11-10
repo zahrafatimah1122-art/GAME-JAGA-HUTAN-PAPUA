@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaga Hutan Papua - Game Karhutla</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>🔥 Jaga Hutan Papua</h1>
+      <p>Game edukasi kebakaran hutan dan lahan (karhutla). Padamkan api sebelum hutan, gambut, dan kampung hilang!</p>
+    </header>
+
+    <section class="hud">
+      <div class="stat">⏱️ Waktu <b id="hud-time">0</b> dtk</div>
+      <div class="stat">🌳 Hutan tersisa <b id="hud-veg">100%</b></div>
+      <div class="stat">🔥 Titik api <b id="hud-fires">0</b></div>
+      <div class="stat">💨 Angin <b id="hud-wind">-</b></div>
+      <div class="stat">💧 Air <div class="bar" id="bar-water"><i></i></div></div>
+      <div class="stat">🌫️ Kabut asap <div class="bar" id="bar-haze"><i></i></div></div>
+      <div class="stat">🏠 Keselamatan warga <div class="bar" id="bar-village"><i></i></div></div>
+    </section>
+
+    <section class="toolbar">
+      <button class="tool active" data-tool="water">1 · 💧 Padamkan</button>
+      <button class="tool" data-tool="break">2 · 🪓 Sekat api</button>
+      <button class="tool" data-tool="wet">3 · 🌊 Basahi gambut</button>
+      <button class="tool ghost" id="btn-pause">⏸️ Jeda (P)</button>
+    </section>
+
+    <div class="stage">
+      <canvas id="game"></canvas>
+      <div class="toast" id="toast"></div>
+      <div class="overlay" id="overlay"></div>
+    </div>
+
+    <section class="tip">
+      <b>💡 Tahukah kamu?</b>
+      <p id="tip">Klik petak yang terbakar untuk memadamkannya.</p>
+    </section>
+
+    <section class="legend">
+      <span><i style="background:#2f6b2f"></i> Hutan</span>
+      <span><i style="background:#5d4037"></i> Gambut</span>
+      <span><i style="background:#c9b27c"></i> Kampung</span>
+      <span><i style="background:#1976d2"></i> Sungai</span>
+      <span><i style="background:#bca27a"></i> Sekat api</span>
+      <span><i style="background:#1c1c1c"></i> Hangus</span>
+    </section>
+
+    <footer>
+      <p>Game ini bersifat edukasi dan disederhanakan. Jika melihat titik api di dunia nyata, segera laporkan ke BPBD, aparat setempat, atau Manggala Agni.</p>
+    </footer>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
